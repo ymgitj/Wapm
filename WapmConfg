@@ -1,0 +1,41 @@
+#Apache config file httpd.confg
+#php install directory is "D:\WAPM\php"
+添加PATH : ext目录
+#ServerRoot install directory
+ServerRoot "D:\WAPM\Apache24"
+#DocumentRoot: The directory out of which you will serve your documents.
+
+DocumentRoot “D:\WAPM\Apache24\test”
+#This directory be equal or great than the up 
+<Directory  “D:\WAPM\Apache24\test”>
+#-----Apache-PHP---------
+#There is php5apache2_2.dll in PHP install directory
+LoadModule php5_module "D:WAPM\php\php5apache2_2.dll
+#install dirctory
+PHPIniDir "D:\WAPM\php" 
+#recognize .php or .html files
+AddType application/x-httpd-php .php .html
+#----------------------------------------------------
+#PHP config And php.ini
+
+#----------------------------------------------------
+#MySQL config
+#install directory "D:\WAPM\mysql5_70\
+Environment PATH  "D:\WAPM\mysql5_70\bin"
+#if add PATH no cd bin directory and will produce a password
+mysqld --initialize --user=mysql --console 
+#Install
+mysqld --install ||MySQL
+#start
+net start MySQL
+#stop
+net stop MySQL
+#quit
+exit OR quit
+#sign in password is up random password
+mysql -u root -p 
+#set root password (attention ;)
+mysql>set password for root@loalhost=password('123');
+
+
+
